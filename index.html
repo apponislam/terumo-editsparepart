@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Admin - Dashboard</title>
+</head>
+
+<body>
+
+    <!------------- Offcanvas Modal ---------->
+
+
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+        </div>
+        <div class="offcanvas-body">
+
+
+            <section class="mainmodal">
+                <div class="container mainoffcanvas">
+                    <h4>EDIT SPARE PART</h4>
+                    <div class="row modal1st">
+
+                        <div class="col-md-6 modal1stcol">
+                            <p>Product Name:</p>
+                            <h5>PRODUCT NAME APPEARS HERE</h5>
+                            <p>Enter Spare Part Name:</p>
+                            <div class="input_div">
+                                <input type="text" placeholder="Spare Part Name Appears Here">
+                                <img src="img/input_over.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 modal2ndcol">
+                            <p>Sub Category Name:</p>
+                            <h5>SUB CATEGORY NAME APPEARS HERE</h5>
+                            <p>Add Thumbnail Image:</p>
+                            <div class="drag_holder">
+                                <div class="drag-area">
+                                    <header>Drag & Drop to Upload File</header>
+                                    <span>OR</span>
+                                    <button>Browse File</button>
+                                    <input type="file" hidden>
+
+                                </div>
+                                <div class="drag_footer" id="DF">
+                                    <ul>
+                                        <li>
+                                            <button> <img src="img/input_over.png" class="drag_img px-2" alt="">
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button><img class="px-2" src="img/delete_over.png" alt=""></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+
+            <section class="container detailscanvas">
+                <h6>Add Details:</h6>
+                <div class="row pt-4">
+                    <div class="col-md-4 sparedetails">
+                        <ul>
+                            <li> <span>INFORMATION</span>
+                                <input class="form-check-input" type="radio" name="rad">
+
+                            </li>
+                            <li><span>REVISION HISTORY</span>
+                                <input class="form-check-input" type="radio" name="rad">
+                            <li>
+                                <span>BILL OF MATERIALS</span>
+                                <input class="form-check-input" type="radio" name="rad">
+                            </li>
+                            <li><span>RESOURCES</span>
+                                <input class="form-check-input" type="radio" name="rad">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-8 sparedetails2">
+                        <p>INFORMATION</p>
+                        <div class="input_div">
+                            <input type="text" placeholder="Part Number Appears Here">
+                            <img src="img/input_over.png" alt="">
+                        </div>
+                        <div class="input_div">
+                            <input type="text" placeholder="Description Appears Here">
+                            <img src="img/input_over.png" alt="">
+                        </div>
+                        <div class="input_div">
+                            <input type="text" placeholder="Service Notes Appears Here">
+                            <img src="img/input_over.png" alt="">
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="modalfooter">
+                <div class="modalfooterbtns">
+                    <button class="butn1">CANCEL</button>
+                    <button class="butn2">SAVE & CONTINUE</button>
+                </div>
+
+            </section>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!---------------------- Header ------------------>
+
+    <div class="header">
+        <div class="navdiv">
+            <img src="img/icon.png">
+
+            <input placeholder="Search Products, Sub Categories, Spare Parts"><i
+                class="fas fa-search search"></i></input>
+
+            <div class="people">
+
+                <img src="img/Usericon.png">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <div class="imgdiv">
+        </div>
+    </div>
+
+    <!---------------------- heroarea ----------------->
+
+    <div class="heroara">
+        <div class="heroheading">
+            <h3>Dashboard</h3>
+        </div>
+
+        <div class="addiv">
+            <input placeholder="Search"><i class="fas fa-search search2"></i></input>
+
+            <a href="#"><i class="fas fa-plus"></i> Add New Product</a>
+        </div>
+
+
+
+
+        <div class="pagediv">
+            <div class="pages">
+                <select name="name" id="name">
+                    <option value="1">SORT BY NAME</option>
+                </select>
+                <i class="fas fa-chevron-down optionico"></i>
+
+                <div class="buttonHolder">
+                    <a href="#" class="actived">1</a>
+                    <a href="#" class="button2">2</a>
+                    <a href="#" class="button2">3</a>
+                    <a href="#" class="button2">4</a>
+                    <a href="#" class="button2"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--------------------- Products ----------------->
+
+        <div class="productdiv">
+
+            <!------------------ Product Line 1 -------------->
+
+            <div class="productline1">
+                <div class="row">
+
+                    <div class="col-md-3 product1">
+                        <div class="product1body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product2">
+                        <div class="product2body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-3 product3">
+                        <div class="product3body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product4">
+                        <div class="product4body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <!-- Prodduct Line 2 -->
+
+
+            <div class="productline2">
+                <div class="row">
+                    <div class="col-md-3 product5">
+                        <div class="product5body">
+                            <img class="productimg" src="img/product4.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product6">
+                        <div class="product6body">
+                            <img class="productimg" src="img/product4.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product7">
+                        <div class="product7body">
+                            <img class="productimg" src="img/product4.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product8">
+                        <div class="product8body">
+                            <img class="productimg" src="img/product4.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!------------------ Product Line 3 -------------->
+
+            <div class="productline3">
+                <div class="row">
+                    <div class="col-md-3 product9">
+                        <div class="product9body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product10">
+                        <div class="product10body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product11">
+                        <div class="product11body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 product12">
+                        <div class="product12body">
+                            <img class="productimg" src="img/product3.png">
+                            <h4>Product 1</h4> <br>
+                            <span>Product Code Number</span>
+                            <p>0101010101</p>
+
+                            <div class="editdiv1">
+                                <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"><img src="img/editmain.png"></a>
+                                <a href="#"><img src="img/deletemain.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <!--------------- footer section ------------->
+
+    <div class="footerdiv">
+        <div class="footertxt">
+            <p>Copyright © 2018 | Powered by Origin Learning Solutions Private Ltd.</p>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
